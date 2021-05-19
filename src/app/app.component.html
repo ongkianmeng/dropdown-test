@@ -1,0 +1,44 @@
+<div class="app__header">
+    <h1 class="app__header-title"> Dropdown test with 10,000 data </h1>
+</div>
+
+
+<section class="app__section">
+    <div class="app__section-header">ngSelect</div>
+
+    <div class="app__section-wrapper">
+        <div class="app__section-comparison">
+            <div class="app__section-comparison-header app__section-comparison-header--lag">Without Virtual Scroll</div>
+            <app-ng-select [data]="data" [labelProp]="labelProp" [placeholder]="placeholder"></app-ng-select>
+        </div>
+
+        <div class="app__section-comparison">
+            <div class="app__section-comparison-header app__section-comparison-header--smooth">With Virtual Scroll</div>
+            <app-ng-select-virtual-scroll [data]="data" [labelProp]="labelProp" [placeholder]="placeholder">
+            </app-ng-select-virtual-scroll>
+        </div>
+    </div>
+</section>
+
+
+<section class="app__section">
+    <div class="app__section-header">Mat Input</div>
+
+    <div class="app__section-wrapper">
+        <div class="app__section-comparison">
+            <div class="app__section-comparison-header app__section-comparison-header--lag">Without Virtual Scroll</div>
+            <app-mat-select [data]="data" [labelProp]="labelProp" [placeholder]="placeholder"></app-mat-select>
+        </div>
+
+        <div class="app__section-comparison">
+            <div class="app__section-comparison-header app__section-comparison-header--smooth">With Virtual Scroll</div>
+            <app-mat-select-virtual-scroll [data]="data" [labelProp]="labelProp" [placeholder]="placeholder">
+            </app-mat-select-virtual-scroll>
+        </div>
+    </div>
+</section>
+
+<section class="app__section app__section--left-align">
+    <div class="app__section-header">Part of data used</div>
+    <pre> {{ this.sampleData | json }} </pre>
+</section>

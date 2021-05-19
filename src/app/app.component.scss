@@ -1,0 +1,67 @@
+$max-width: 780px;
+
+.app {
+    &__header {
+        max-width: $max-width;
+        margin: 2em auto;
+
+        &-title {
+            text-align: center;
+        }
+    }
+
+    &__section {
+        border: 1px solid #cec7c7;
+        padding: 1em;
+        margin: 1em auto;
+        text-align: center;
+        max-width: $max-width;
+
+        &--left-align {
+            text-align: left;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #cec7c7;
+            padding-bottom: 5px;
+        }
+
+        &-comparison {
+            flex: 1 1 auto;
+            margin: 10px;
+
+            &-header {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px;
+
+                &--lag {
+                    color: red;
+
+                    &:after {
+                        content: " ❌";
+                    }
+                }
+
+                &--smooth {
+                    color: green;
+                    &:after {
+                        content: " ✔️";
+                    }
+                }
+            }
+
+            mat-form-field {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-select [placeholder]="placeholder" (openedChange)="openChange($event)" [value]="selected">
+        <cdk-virtual-scroll-viewport itemSize="50" [style.height.px]=5*48>
+            <mat-option *cdkVirtualFor="let item of data" [value]="item"
+                (onSelectionChange)="onSelectionChange($event)">{{ item[labelProp] }}</mat-option>
+        </cdk-virtual-scroll-viewport>
+    </mat-select>
+</mat-form-field>

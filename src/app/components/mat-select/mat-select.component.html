@@ -1,0 +1,6 @@
+<mat-form-field>
+    <mat-select [placeholder]="placeholder" [value]="selected">
+        <mat-option *ngFor="let item of data" [value]="item" (onSelectionChange)="onSelectionChange($event)">
+            {{ item[labelProp] }}</mat-option>
+    </mat-select>
+</mat-form-field>
