@@ -1,4 +1,4 @@
-<ng-select [virtualScroll]="true" [placeholder]="placeholder">
+<ng-select [virtualScroll]="true" [placeholder]="placeholder" [clearable]="false">
     <ng-option *ngFor="let item of items" [value]="item">
         {{ item[labelprop] }}
     </ng-option>

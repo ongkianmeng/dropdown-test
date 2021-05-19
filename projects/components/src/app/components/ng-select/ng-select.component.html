@@ -1,4 +1,4 @@
-<ng-select [placeholder]="placeholder">
+<ng-select [placeholder]="placeholder" [clearable]="false">
     <ng-option *ngFor="let item of items" [value]="item">
         {{ item[labelprop] }}
     </ng-option>
