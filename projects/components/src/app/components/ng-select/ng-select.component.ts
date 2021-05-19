@@ -8,9 +8,9 @@ import { Component, Input } from '@angular/core';
 
 export class NgSelectComponent {
 
-  @Input() data: any[];
+  @Input() items: any[];
 
-  @Input() labelProp: string;
+  @Input() labelprop: string;
   
   @Input() placeholder: string;
 

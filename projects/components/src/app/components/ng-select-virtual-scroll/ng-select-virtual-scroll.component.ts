@@ -9,9 +9,9 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 export class NgSelectVirtualScrollComponent {
 
-  @Input() data: any[];
+  @Input() items: any[];
 
-  @Input() labelProp: string;
+  @Input() labelprop: string;
   
   @Input() placeholder: string;
 

@@ -10,17 +10,17 @@ import { AppService } from './services/app.service';
 })
 export class AppComponent {
 
-  data: any[] = [];
+  items: any[] = [];
   
   sampleData: any[] = [];
 
-  labelProp = 'title'
+  labelprop = 'title'
 
   placeholder = 'Please Select';
 
   constructor(private _appService: AppService) {
-    this.data = this._appService.getObjectData();
+    this.items = this._appService.getObjectData();
 
-    this.sampleData = this.data.slice(0,5);
+    this.sampleData = this.items.slice(0,5);
   }
 }

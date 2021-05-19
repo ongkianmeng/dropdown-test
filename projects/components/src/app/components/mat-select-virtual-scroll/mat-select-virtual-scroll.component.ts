@@ -9,9 +9,9 @@ import { Component, Input, ViewChild } from '@angular/core';
 
 export class MatSelectVirtualScrollComponent {
 
-  @Input() data: any[];
+  @Input() items: any[];
 
-  @Input() labelProp: string;
+  @Input() labelprop: string;
   
   @Input() placeholder: string;
 
@@ -33,7 +33,7 @@ export class MatSelectVirtualScrollComponent {
       return;
     } 
     this.selected = change.source.value;
-    this.selectedIndex = this.data.indexOf(this.selected);
+    this.selectedIndex = this.items.indexOf(this.selected);
   }
 
 }
